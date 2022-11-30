@@ -1,0 +1,100 @@
+/*  */
+
+div{color: red;  /* specificità 1 */
+
+}
+.sfondo-blu{        /* spec. 10 */
+    color: blue;   
+}
+
+#sfondo-verde{       /* spec. 100 */
+    color: green;
+}
+
+/* selettori gerarchici */
+
+div div{    /*spec. 1+1  */
+    color: green;
+}
+
+/*  */
+
+/* selettori multipli */
+
+h1, h2, h3, h4, h5, h6{
+    color: aliceblue;
+}
+
+/* selettori avanzati */
+
+.gelato+span{
+    color: aquamarine;
+
+}
+
+/* ogni volta che l'input viene focussato cambia il bordo */
+input[type="text"]:focus{
+    border: 5px solid red;
+}
+
+/* importante!!! ognivolta che verrà checkato l'input il div sucessivo diventa colorato di blueviolet */
+input[type="checkbox"]:checked + div{
+    background-color: blueviolet;
+}
+
+
+table tr:nth-of-type(2){
+    background-color: grey;
+}
+
+/* ogni volta che passa il mouse sulle parole della prima riga diventa bianco con transizione */
+table tr:first-of-type td:hover{
+    color: white;
+    transition: color 0.5s;
+}
+
+
+table tr:last-of-type td::after{
+    content: ">" ;
+
+}
+
+
+
+/* per le misure dei font meglio usare rem per le proporzioni dei font */
+/* non usare vh o vw per i font!!! */
+
+/* root per rem e madre font per em */
+
+:root{   /* elemento radice */
+    font-size: 25px;
+}
+
+#p1{
+    font-size: 1rem; /* basato sulla misura del root */
+}
+
+#p3{
+    font-size: 20px;
+}
+
+#p3 span{
+    font-size: 1lem; /* basato sulla msura del contenitore madre  */
+}
+
+
+
+/* cambio di font */
+
+/* 1roboto.com:scaricare il font,creare cartella font,esare @fontface che è una direttiva per usarlo nei selettori*/
+
+@font-face {    /* proprietà per creare font */
+    font-family:Font personale; /* nome per il font */
+    src: url();/* aggiungere url,magari non legge il formato quindi aggiungere proprietà format() */
+}
+
+/* line height altezza della linea(non interlinea) che si distribuisce sopra e sotto il testo*/
+.line{
+    background-color: green;
+    line-height: 200px;
+}
