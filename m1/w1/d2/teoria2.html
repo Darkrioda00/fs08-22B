@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+ <!-- elementi base di unaa tabella -->
+    <table></table> <!-- tag per tabelle --> 
+    <caption></caption><!--  intestazione della tabella-->
+    <tr></tr><!--  riga-->
+    <th></th><!-- cella di intestazione -->
+    <td></td><!-- cella -->
+
+    <!-- esempio di tabella -->
+
+    <table>
+     <caption>registro presenze</caption>
+        <tr>
+          <th>nome</th>
+          <th>anno</th>
+          <th>presenze</th>
+        </tr>
+        <tr>
+         <td>luca</td>
+         <td>2021</td>
+         <td>30</td>
+        </tr>
+        <tr>
+         <td>maria</td>
+         <td>2021</td>
+         <td>27</td>
+        </tr>
+    </table>
+
+    <!-- colspan="numero" -numero di colonne da occupare -->
+    <!-- rowspan="numero" -numero di righe da occupare -->
+    <table>
+        <tr>
+            <td colspan="2"></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <!--elementi semantici della tabellaa  -->
+    <thead></thead>intestazione dell tabella
+    <tbody></tbody> corpo della tabella
+    <tfoot></tfoot> pie di paagina della tabella
+
+    <!-- esempio -->
+    <table>
+        <thead>
+            <tr>filiare</tr>
+            <tr>incasso</tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>sede A</td>
+                <td>120000</td>
+            </tr>
+            <tr>
+                <td>sede B</td>
+                <td>140000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Totale</td>
+                <td>260000</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- table>tr*3>td*3 -->
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <!-- markup per i font -->
+    <form method="POST" action="codice php" autocomplete="on"> <!--modulo di invio informazioni  -->
+        <fieldset><!--set di campi  -->
+            <legend>Anagrafica</legend><!-- intestazione dei fieldset -->
+        ...campi...
+        </fieldset>
+    </form>
+
+    <!-- elementi del form -->
+    <form method="" action=""> <!-- "get" sporca l'indirizzo "post" non sporca e invia molti più dati -->
+    <!-- action definisce a chi mandare le info -->
+
+        <input name="nome" type="text" placeholder=""><!-- placeholder è la scritta in grigio dentro l'input -->
+
+        <!-- type sono vari:password,email,number,label,tel,checkbox,radio -->
+
+        <!-- esempio di input+label (la label lavora molto bene con le input perchè segue con for)-->
+        <input type="consenso" type="checkbox">
+        <label for="consenso">acconsento al trattamento dei dati</label>
+
+        <!-- esempio radio, se value diversi solo uno sara selezionato  -->
+        <input type="radio" name="gender" value="m">
+        <input type="radio" name="gender" value="f">
+        <input type="radio" name="gender" value="x">
+
+        <select name="città" id=""><!--usare quando si mette un set limitato da scegliere  -->
+            <option value=""></option><!-- valore del select -->
+        </select>
+
+        <textarea  name="messaggio" cols="30" rows="10"></textarea><!--cols altezza rows numero di righe  -->
+        <button></button><!-- bottone  funzionante solo dentro il form -->
+
+    </form>
+
+
+
+
+
+
+</body>
+</html>
