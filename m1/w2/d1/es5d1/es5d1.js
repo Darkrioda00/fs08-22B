@@ -11,25 +11,27 @@ REGOLE
  Elenca e descrivi i principali datatype in JavaScript. Prova a spiegarli come se volessi farli comprendere a un bambino.
 */
 
-/* var numero = 5  numerica
-   var stringa = 'testo' testuale
-   var array = [5,testo]  lista di elementi,riconoscibile con le []
-   var oggetto = {lista di elementi in coppia}  riconoscibile con le {}  */
+/* let numero = 5  numerica
+   let stringa = 'testo' testuale
+   let array = [5,testo]  lista di elementi,riconoscibile con le []
+   let oggetto = {lista di elementi in coppia}  riconoscibile con le {}  */
+// let none = 
+// let boolean = "true o false"
 
 /* ESERCIZIO 2
  Crea una variable chiamata "name" e assegna ad essa il tuo nome, sotto forma di stringa.
 */
 
-var name = 'Dario';
+const name = 'Dario';
  
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 3
 Scrivi il codice necessario ad effettuare un addizione (una somma) dei numeri 12 e 20.
 */
-var a = 12;
-var b = 20;
-var c= a + b;
+let a = 12;
+let b = 20;
+let c= a + b;
 //oppure console.log(a += b);
 console.log(c)
 
@@ -38,7 +40,7 @@ console.log(c)
 /* ESERCIZIO 4
 Crea una variable di nome "x" e assegna ad essa il numero 12.
 */
-var x = 12;
+let x = 12;
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -46,7 +48,7 @@ var x = 12;
  Riassegna un nuovo valore alla variabile "name" giÃ  esistente: il tuo cognome.
  Dimostra l'impossibilitÃ  di riassegnare un valore ad una variabile dichiarata con il costrutto const.
 */
-var name = 'Hu'
+// name = 'Hu'
 
 const cognome = 'Hu'
 //const cognome = 'Hu' darà errore
@@ -57,8 +59,9 @@ const cognome = 'Hu'
 Esegui una sottrazione tra i numeri 4 e la variable "x" appena dichiarata (che contiene il numero 12).
 */
 var d = 4;
-var e = x - d
-// oppure console.log(x -= d);
+var e = x - d;
+console.log(e);
+// oppure console.log(x -= d);     //il risultato andrà alla variabile x
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 7
@@ -71,7 +74,7 @@ var name2 ='John'
 console.log(name1 == name2)
 
 //extra
-if(name1.toLowerCase === name2.toLowerCase){
+if(name1.toLowerCase() === name2.toLowerCase()){
  console.log('true')
 }else{
  console.log('false')
