@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//<--------GLI OGGETTI-------->//
+    //In js ogni elemento può essere un oggetto:variabili,array,date,stringhe,espressioni matematiche
+    //di solito si definisce un oggetto con una const
+    //un oggetto può contenere più valori--> nome: 'valore'
+    const PET ={
+        specie:"gatto",
+        nome:'Tigro',
+        colore:'rosso',
+        anni:'4',
+        //gli attributi principali sono proprietà(come specie e nome)e metodi
+        //esempio di metodo(che sono funzioni all'interno di oggetti o altri funzioni)
+        tipo:function(){
+            return this.specie+ this.nome;
+            //this fa rifermento all'oggetto corrente(di solito in HTML)
+        }
+    }
+
+    //possiamo gestire e manipolare le proprietà dell'oggetto tramite il metodo Costruttore dell'oggetto
+    //il nome del Costruttore è di solito TUTTO IN MAIUSCOLO
+    function Pet(razza,nome,colore,anni){
+        this.razza = razza,
+        this.nome = nome,
+        this.colore = colore,
+        this.anni = anni 
+    }
+    //Oggetto specifico
+    const GATTO = new Pet("soriano","Tigro","Rosso",7);
+
+    //Ci sono taanti costruttori predefiniti
+    //new String(),Number(),Boolean(),Object(),Array(),RegExp(),Function(),Date()
+
+
+    //Con prototype si possono aggiungere al costruttore proprietà e metodi
+    //aggiungo una proprietà
+    Pet.prototype.genere = "femmina"
+    //aggiungo un metodo
+    Pet.prototype.tipo=function(){
+        return this.razza+this.nome;
+    }
+
+    //Possiamo inoltre aggiungere una proprietà o metodo ad un oggetto gia esistente
+    //oggetto.nuovaProprietà=valore;
+    //oggetto.proprietà=funzione;
+    gatto.genere = "maschio";
+    gatto.tipo = function(){
+        return this.razza * this.nome;
+    }
+
+//<--------GLI ARRAY-------->//
+    //per gli array di solito si usa var(sono considerati oggetti)
+    var animali = ["gatto",
+    "cane",
+    "coniglio"]
+
+    //Per creare un Array possiamo usare la keywords new
+    var anni = new Array (
+        1920,
+        1965,
+        2013
+    )
+
+    //Per accedere agli elementi dell'array facciamo riferimento al numero di indice
+    var tipoAnimale = animali[0];
+    console.log(tipoAnimale); //darà "gatto"
+    var tipoAnimale = animale[1];
+    console.log(tipoAnimale); //darà "cane"
+    var tipoAnimale = animale[3];
+    console.log(tipoAnimale);//darà "undefined"
+
+    //Con sort() possiamo ordinarli in ordine alfabetico
+    animali.sort();
+    
+
+
+    
+    
+
+    </script>
+    
+</body>
+</html>

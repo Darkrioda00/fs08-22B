@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//---------->//TIPI DI VARIABILI//<-----------//
+
+        //-Variabile numerico-//
+        var numeroIntero = 10
+        var numeroDecimale = 10.10 //mi raccomando il . non la ,
+        // se scriviamo var numero = '10' sarà interpretato come stringa (quindi non di tipo numerico)
+
+        //ad una variabile possiamo assegnare anche il valore di unaa o più variabile
+        var a = 10;
+        var b = a;
+        var c = a + b;//in questo caso c varrà 20 con utilizzo di operatori matematici
+
+        // si possono anche riassegnare il valore delle variabili
+
+        var numero1 = 5;
+        console.log(numero1) //darà 5
+        numero1 = 3;
+        document.write(numero1) // darà 3,il codice leggerà l'ultimo valore assegnato
+
+
+
+        //-Variabile 'stringa'-//
+        var nome = 'Dario';
+        var cognome = "Hu";
+        var username = `Darkrioda00`; //virgolette con option+9
+
+        //Le variabili possono essere concatenate
+        console.log(nome+cognome+username) //darà DarioHuDarkrioda00(tuttoAttaccato)
+        console.log(nome + "" + cognome + "" + username) //darà Dario Hu Darkrioda00
+
+        //Si possono comporre frasi con senso logico
+        document.write("Nome utente:" + nome + ",Cognome utente:" + cognome + ",Username:" + username);
+        //darà Nome utente:Dario,Cognome utente:Hu,Username:Darkrioda00
+
+
+        //-Variabile booleana ( true or false)-//
+        var altezza = 'true';
+        var lunghezza ='false';
+
+
+
+//---------->//AL POSTO DI VAR POSSIAMO USARE LET E CONST//<----------//
+        let //è utile quando vogliamo assegnare la variabile ad uno scopo legata al blocco(visibilità, accessibilità) 
+
+        //!!!!!!ATTENZIONE AL BLOKSCOPE!!!!!!!
+        var nome = "Dario";
+        console.log(nome)//Dario
+        {
+            var nome = "Carla";
+            console.log(nome)//Darà Carla
+        }
+        console.log (nome) //Darà Carla (riassegnato)
+
+        var nome2 = "Dario"
+        console.log(nome2) //Dario
+        {
+            let nome2 = "Carla"
+            console.log(nome2) //Darà Carla
+        }
+        console.log(nome2) //Darà Dario
+
+        const //NON PUò ESSERE RIASSEGNATA SE CI PROVI TI DA ERRORE;ANCHE QUI Cè IL BLOCKSCOPE
+
+//-------->GLI OPERATORI<-------//
+        
+        //-OPERATORI DI ASSEGNAZIONE-// .  //-la somma vale anche per le strighe-//
+        var numero1= 3;
+        var numero2= 9;
+
+        //uguale = //
+        numero1=numero2;
+        
+        //somma += //
+        var numero1 += numero2
+        var numero1 = numero1 + numero2 //daranno come risultato 12
+
+        //sottrazione -= //
+        var numero2 -= numero1 //daranno 6
+        var numero1 = numero2 - numero1
+
+        //moltiplicazione *= //
+        var numero2 *= numero1 //daranno 27
+        var numero1 = numero2 * numero1
+
+        //divisione /= //
+        var numero2 /= numero1 //daranno 3
+        var numero1 = numero2 / numero1
+
+
+
+        //->OPERATORI LOGICI<-//
+        numero1 == numero2 
+        
+        //AND = tutte le condizioni devono essere vere, si esprime con &&
+        numero1<numero2 && numero2>numero1 
+        
+        //OR = o una o l'altra, si esprime con ||
+        numero1 < numero2 || numero2 > numero1
+
+        //NOT significa che la condizione non deve essere vera, si esprime con !
+        !(numero1 == numero2)
+
+
+
+        //->OPERATORI DI COMPARAZIONE<-//
+
+        //typeof ci permette di dare il tipo di dato nell'output
+        typeof 3 //esce number
+        typeof "Mario" //esce string
+
+        //== operatore di uguaglianza,indica che haanno lo stesso valore
+        numero1 == numero2 //darà false
+
+        //=== operatore di identità,i due valori devono avere lo stesso valore ed essere dello stesso tipo
+
+        document.write( 3 ==='3')//false,stesso valore ma non stesso tipo
+        document.write( 3 === 3)// true
+        document.write( 3 != 3) //false,sono UGUALI
+        document.write( 3 !== "3") // true, non IDENTICI
+
+
+
+        //->OPERATORE TERNARIO<-//
+        var ingresso= (anni<18) ? "ingresso vietato" : "ingresso permesso"
+        
+        anni= 15; //ingresso vietato
+        anni=20; //ingresso permesso
+
+        
+
+
+
+        
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
