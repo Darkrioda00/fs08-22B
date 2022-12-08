@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="prova"></h1>
+    <script>
+        //direttive di output
+        //sono istruzioni specifiche che restituiscono al display il risultato di uno script
+        innerHtml =>elemento HTML;
+        document.write => documento;
+        window.alert => box pop up;  //la keyword window può essere OMESSO
+        console.log => debug del browser;
+        //ogni direttiva ha il suo target di riferimento
+
+        document.getElementById('prova.').innerHTML = 3+4; //elemento html
+        document.write(3 + 4); //Documento
+        window.alert (3 + 4); // pop up
+
+        //lista di keywords
+        var,let,const //sono keywords dei variabili
+
+        function name(){} // keywords delle funzioni
+
+        return //keywords che serve per interrompere il flusso del codice in un deteterminato caso impostato
+        if,else if,else //keywords per costrutti condizionali
+
+
+        Null //keywords che segnala l'assenza intenzionale di un oggetto
+
+        new //keywords per gli oggetti in riferimento a:stringhe,numeri,booleani
+
+
+
+        //esercitazione
+        alert('Usa il pop up per dare dei messaggi');//due pop up che si aprono quando accedi alla pagina
+        window.alert('Sto studiando JS');
+
+
+        // var 1 pet_preferito = 'gatto'; ====sono sbagliati per 1 scritto prima di pet
+        // console.log(1 pet_preferito);  quindi il cosole non lo leggerà
+
+        // var pet = 'gatto';    due variabili che hanno lo stesso nome,NON VA BENE
+        // var Pet = 'cane';
+        var petPreferito = 'criceto';
+        var PetPreferito = 'coniglio';
+
+        var $pet = 'giraffa'; //tutte variabili con nomi diversi
+        console.log($pet);
+        var _pet = 'leone';
+        console.log(_pet);
+        var _pet2 = 'pantera';
+        document.write(_pet2);
+
+        // var 12 = 'numero';  anche questo è sbagliato
+    </script>
+    
+</body>
+</html>

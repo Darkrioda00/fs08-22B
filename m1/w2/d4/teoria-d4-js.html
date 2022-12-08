@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//<------Il costrutto switch----->//
+    //simile ad if-else 
+    switch(variabile o espressione){
+        case a:;
+        break;
+        case b:;
+        break;
+        case c:;
+        default:
+
+    }
+    //di solito si mettono dei break sotto i casi per interrompere il costrutto;
+    //la keywords Default indica il caso in cui i case non sono validi
+     weekend = "sabato";
+    switch(weekend){
+        case 0:
+            giorno ="venerdì";
+        break;
+        case 1:
+            giorno ="sabato";
+        break;
+        case 2:
+            giorno ="domenica";
+        break;
+        default:
+            giorno = "feriale";
+    }
+//<------Il costrutto while----->//
+    //Con la keywords while definiamo un ciclo che scorre il blocco di istruzioni fino a che la condizione rimanga vera
+    while(condizione){
+        //blocco di istruzione da eseguire
+        condizione++
+        //la mancanza dell'incremento o decremento fa diventare il ciclo INFINITO
+
+    }
+    //esempio
+    var numero = 0;
+    while(numero<=10){
+        numero++
+    }
+//<------Il costrutto do/while----->//
+    //variante della while
+    do{
+        //blocco di codice da eseguire
+        condizione++;}
+
+    while(condizione);
+    
+    //esempio
+    var numero = 0;
+    do{
+        text += "Ciclo:" + "numero" +"<br>";
+        numero++;
+    }
+    while(numero<10);
+
+//<------Iterazione Array----->//
+    //ForEach():metodo che richiama una funzione per ogni elemento dell'array
+    var numeri = [3,15,58,300]
+    numero.array.forEach(funzione);
+
+    //Map(): crea un nuovo array applicando la funzione ad ogni elemento
+    var lista=[15,30,45,60]
+    var nuovaLista=lista.map(funzione);
+    
+    //Filter():applica una funzione agli elementi dell'array che filtra l'output secondo un opzione data
+    var numeri = [32,7,84,12]
+    numeri.filter(function(){
+        return valore>30; //l'output darà 32 e 84
+    })
+
+    //Reduce():ritorna un unico valore applicando una funzione a tutti gli elementi dell'array
+    //per l'esecuzione da destra a sinistra ReduceRight().
+    var numeri =[2,4,7,6,3];
+    var TotaleLista = numeri.reduce(funzione);
+
+    function funzione(totale,valore){ //darà 22 come somma di tutto
+     return valore+totale
+    }
+    function funzione(totale,valore){ //drà 1008 come molt di tutto
+        return valore * totale
+    }
+    //si può assegnare un valore iniziale al metodo
+    var totaleLista = numeri.reduce(funzione,10)
+
+    //Every():determina se un array risponde ad un certo requisito 
+    //in tutti i suoi elementi
+
+    var numeri = [3,22,4,76,39];
+    var ricerca =numeri.every(funzione);
+
+    function funzione (valore){
+        return valore>10;//darà false perchè non tutti i valori sono>10
+
+    }
+
+    //Some():determina se un array risponde ad un certo requisito 
+    //in alcuni i suoi elementi
+    var numeri = [3,22,4,76,39];
+    var ricerca =numeri.some(funzione);
+
+    function funzione (valore){
+        return valore>10;//darà true perchè alcuni sono > 10;
+
+    }
+
+    //IndexOf():determina la posizione di un elemento in base ad una chiave di ricerca
+    var pets=["cane","gatto","criceto","coniglio"];
+    var posizione = pets.indexOf("gatto");
+
+    //Find():determina il primo elemento di un array che risponde ad un requisito impostato da una funzione
+    var numeri = [4,9,16,25,29]
+    var primoItem = numeri.find(function(){
+        return valore>10 //darà 16 perchè il primo elemento>10 è 16
+    })
+
+    //FindIndex():determina la posizione di un elemento arrayche risponde ad un certo requisito
+    var numeri = [4,9,16,25,29]
+    var primoItem = numeri.findIndex(function(){
+        return valore>10 //darà 2 che è la posizione dove si trova 16 cioè il primo elemento>10
+    })
+
+
+
+//<------CICLO FOR----->//
+    //Con la keyword for indichiamo un ciclo che viene eseguito per un certo numero di volte
+    var numeri = [4,9,16,25,29]
+    for(var i = 0; i<numeri.length; i++){
+        somma += numeri[i]
+    }
+    //for(parametro1;parametro2;parametro3)
+    //parametro1:è eseguito 1 volta e rappresenta l'inizio del ciclo
+    //parametro2:indica la condizione stessa e il numero di volte per eseguire il codice
+    //parametro3:è eseguito dopo il blocco di codice e si ripete per il numero di volte indicaato dal parametro2;
+
+
+    //For-in:si serve dell'associazione di una chiave(variabile)al valore rappresentato da ogni singolo elemento dell'array
+    var array = [4,9,16,25,29];
+    for(var chiave in array);{
+        array[chiave];
+    }
+
+    //For-of:determina la scomposizione di una serie di elementi soggetti singolarmente al ciclo
+    var nome = "Mario"
+    var testo = "";
+
+    for(var carattere of nome){
+        testo +=carattere + "<br>";//darà la scritta mario scomposto in verticale
+    }
+    //applicabile anche agli array
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
