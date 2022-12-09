@@ -265,7 +265,7 @@ for ( let i = 0; i < starWarsCharacters.length; i++){
     }
   }
  }
-// COME L'HA FATTO NICOLAE
+
 //  console.log("Num personaggi prima:" + characters.length);
 //  for (let i of femaleCharacters){
 //   for (let j of characters) {
@@ -279,10 +279,10 @@ for ( let i = 0; i < starWarsCharacters.length; i++){
   /* EXTRA ESERCIZIO 10
   Crea una funzionalità che prenda un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo
   */
- let frase = "";
- let character = starWarsCharacters[ parseInt(Math.random()* starWarsCharacters.length)];
- for( Let i in character){
-  frase += i + ":" + character[i] + ",";
- }
- console.log(frase);
+//  let frase = "";
+//  let character = starWarsCharacters[ parseInt(Math.random()* starWarsCharacters.length)];
+//  for( Let i in character){
+//   frase += i + ":" + character[i] + ",";
+//  }
+//  console.log(frase);
 
