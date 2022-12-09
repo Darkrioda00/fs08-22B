@@ -1,0 +1,108 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin-top: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+}
+.linkblu{
+    font-weight: bold;
+    color:blue;
+    text-decoration: none ;
+    margin-left: 5px; 
+    font-size: smaller;
+}
+/* header */
+
+.rigascura{
+    background-color:rgb(26, 35, 44) ;
+}
+
+.logo{
+    width:12% ;
+    padding-top: 2%;
+}
+/* nav */
+nav{
+    background-color:#384452 ;
+    
+}
+ul{
+    margin: 0;
+}
+li{
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 2px;
+}
+li>a{
+    font-size: small;
+    color: white;
+    text-decoration: none;
+}
+/* main */
+main{
+    background-color: rgb(234, 236, 237);
+}
+.riga-arancione{
+    background-color:#f56600;
+    margin-top: 0;
+    font-size: small;
+    color: white;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.Shop{
+    margin-top: 15px;
+    line-height: 20px;
+}
+/* holiday gift */
+.holiday-gift-guides{
+    background-image: url(assets/bg-image.png);
+    background-size: contain;
+    height: 25%;
+    text-align: center;
+    color: white;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+h1{
+
+    font-size:larger ;
+    padding-top: 5%;
+}
+.Be-a-go{
+    font-weight: bold;
+    font-size: small;
+}
+.sezione1{
+    background-color: white;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-left: 5px;
+
+    
+    
+}
+.Find-the{
+    font-size: small;
+    padding-top: 5px;
+}
+.sezione-cards{
+    text-align: center;
+}
+.card{
+    display: inline-block;
+    
+}
+div .card>img{
+    object-fit: cover;
+    border-radius: 10px;
+    width: 130px;
+    height: 180px;
+    margin-right: 10px;
+}
