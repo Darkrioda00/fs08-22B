@@ -102,7 +102,57 @@ h1{
 div .card>img{
     object-fit: cover;
     border-radius: 10px;
-    width: 130px;
-    height: 180px;
-    margin-right: 10px;
+    width: 200px;
+    height: 250px;
+    margin-right: 25px;
+    box-shadow: 1px 1px  rgba(0, 0, 0, 0.4);
+}
+.sezione2{
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 3%;
+    height: 220px;
+    background-image: url(assets/img_9.png);
+    background-size: cover;
+}
+.Play-the{
+    text-align: center;
+    font-size: small;
+    margin-top: 0;
+}
+.sezione3{
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 3%;
+    height: 220px;
+    background-image: url(assets/img_10.png);
+    background-size: cover;
+}
+.The-sound{
+    text-align: center;
+    font-size: small;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 30px;
+
+}
+
+.Back-to-top{
+    text-align: center;
+    background-color:#384452 ;
+    height: 30px;
+    padding-top: 10px;
+
+}
+.linkbianco{
+    color: white;
+}
+.rigasotto{
+    background-color:rgb(26, 35, 44) ;
+    text-align: center;
+    height: 150px;
+}
+.logo2{
+    width:12% ;
+    padding-top:30px; ;
 }

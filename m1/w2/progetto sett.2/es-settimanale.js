@@ -27,6 +27,12 @@ console.log(unorderpets);
 /* ESERCIZIO 4
     Scrivi del codice per spostare il primo elemento dall'array "pets" in ultima posizione.
 */
+pets.shift(pets);
+pets.unshift("cat");
+pets.pop(pets);
+pets.push("redfish");
+
+console.log(pets);
 
 
 
@@ -53,9 +59,9 @@ const cars = [
     trims: ['life', 'style', 'r-line'],
   },
 ]
-cars[0].licensePlate = "B";
-cars[1].licensePlate = "B";
-cars[2].licensePlate = "B";
+cars[0].licensePlate = "AU867LO";
+cars[1].licensePlate = "FR239YY";
+cars[2].licensePlate = "BB442SR";
 console.log(cars);
 
 
@@ -68,7 +74,7 @@ cars[3] = {
   model: 'S',
   color: 'black',
   trims: ['plaid', 'base'],
-  licensePlate: "B",
+  licensePlate: "CA234VC",
 };
 
 
@@ -104,7 +110,7 @@ for (let i = 0; i< cars.length; i++){
 }
 
 /* ESERCIZIO 9
-    Utilizza un ciclo while per stampare in console i valori del seguente array numerico fino al raggiungimento del numero 32.
+  Utilizza un ciclo while per stampare in console i valori del seguente array numerico fino al raggiungimento del numero 32.
 */
 const numericArray = [
   6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
@@ -112,10 +118,8 @@ const numericArray = [
 let i=numericArray;
 do{
   i; i++;
-}while(i=== 32);
+}while(i === 32);
 console.log(numericArray)
-
-
 
 /* ESERCIZIO 10
   Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno
@@ -123,4 +127,22 @@ console.log(numericArray)
   es. [f, b, e] --> [6, 2, 5]
 */
 const charactersArray = ["g", "n", "u", "z", "d"]
-const position = []
+for (let i = 0; i< charactersArray.length; i++){
+switch(charactersArray){
+  case "g":
+    charactersArray[i] = 7;
+  break;
+  case "n":
+    charactersArray[i] = 14;
+  break;
+  case "u":
+    charactersArray[i] = 21;
+  break;
+  case "z":
+    charactersArray[i] = 26;
+  break;
+  case "d":
+    charactersArray[i] = 4;
+  break;
+  default:console.log(charactersArray);
+}}

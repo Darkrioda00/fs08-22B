@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//------LE FUNZIONI------//
+    function nomeFunzione(paramentri){ //anche se non ci sono mettere le tonde lo stesso//
+        //codice da eseguire
+    }
+
+    //-----hosting:sollevamento,indica la possibilità per js di eseguire la funzione prima che sia dichiarata
+
+    miaFunzione(10);
+    function miaFunzione(numero){
+        return numero + numero;  //return:restituisce il valore relativo e interrompe la funzione
+    }
+
+    // medoti stringhe:lunghezza delle stringhe
+
+    //IndexOf():determina la posizione di un elemento in base ad una chiave di ricerca
+    var pets=["cane","gatto","criceto","coniglio"];
+    var posizione = pets.indexOf("gatto");
+
+    //Find():determina il primo elemento di un array che risponde ad un requisito impostato da una funzione
+    var numeri = [4,9,16,25,29]
+    var primoItem = numeri.find(function(){
+        return valore>10 //darà 16 perchè il primo elemento>10 è 16
+    })
+
+    //FindIndex():determina la posizione di un elemento arrayche risponde ad un certo requisito
+    var numeri = [4,9,16,25,29]
+    var primoItem = numeri.findIndex(function(){
+        return valore>10 //darà 2 che è la posizione dove si trova 16 cioè il primo elemento>10
+    })
+
+    //estrazione parte di stringa
+
+    //slice():accetta due parametri-posizione inizio e fine
+    var saluto = "Ciao a tutti i studenti";
+    var pos = saluto.slice(7, 12); //darà "tutti"
+    var pos1 = saluto.slice(-12, -9); //darà "gli"
+    var pos2 = saluto.slice(7); //darà "tutti i studenti"
+
+    //substring():uguale ad slice ma non accetta numeri negativi
+
+    //substr():analogo a slice ma il secondo valore indica la lunghezza della stringaa estratta
+    
+    //replace():sostuituisce la stringa indicata
+    replace("parola da sostituire", "parola che sostituisce");
+
+    //toLowerCase(),toUpperCase():tutto in minuscolo o MAIUSCOLO
+
+    //concat("stringa da aggiungere"):concatena due stringhe
+
+    //trim():elimina gli spazi vuoti inutili
+
+    //charAt():possiamo indicare un carattere relativo ad una posizione indicata
+
+    //split():permette di suddividere la stringa nei sui elementi
+    var stringa= "Ciao";
+    var lista = stringa.split("") //darà una lista di lettere con le virgolette
+
+//-------METODI MATEMATICI---------//
+
+    //random():metodo dell'oggetto Math che restituisce un numero decimale casuale
+    Math.random() //numero decimale casuale
+
+    //per un numero intero si utilizza il metodo floor()
+    math.floor(Math.random()); //darà 0;
+
+    //se vogliamo ottenere dei numeri casuali interi moltiplichiamo tutto per un munero intero
+    math.floor(Math.random()*10); //0-9
+    math.floor(Math.random()*11);   //0-10
+    math.floor(Math.random()*10)+1; //0-10
+    math.floor(Math.random()*100);  //0-99
+
+    //metodo Boolean():per una verifica booleana
+    Boolean(5>4);//darà true
+    Boolean(4>5);//darà false
+    
+    //Possiamo utilizzare anche un oggetto
+    var numero = false
+    var numero1 = new Boolean(false);
+    typeof(numero)//darà Boolean
+    typeof(numero1)//darà object
+    Boolean(numero == numero1) //darà true
+    Boolean(numero === numero1)//darà false
+
+//-----DATE E METODI DATE
+    //var dataAttuale = new Date():mostra una stringa completa con giorno,mese,aanno,orario e indicazione del timezone del browser
+
+    //è possibile creare una data specifica con valori da noi selezionati
+    //i valori in ordine sono:Anno, mese(ordinati da 0 a 11), giorno, ore, minuti, secondi, millisecondi
+
+    //è possibile creare una data da un stringa
+
+    //è possibile utilizzare get() per prendere delle informazioni dall'oggetto date
+
+    var data=new Date();
+    data.getFullYear();
+    data.getMonth();//mesi da 0-11
+    data.getDate();
+    data.getHours();//ore da 0-23
+    data.getMinutes();//minuti da 0-59
+    data.getSeconds();//secondi da 0-59
+    data.getMilliseconds();//miliisecondi da 0-999
+    data.getTime();
+    data.getDay();//giorni della settimana da 0-6
+
+    //con set() al posto di get() possiamo configurarle
+
+
+    </script>
+</body>
+</html>
