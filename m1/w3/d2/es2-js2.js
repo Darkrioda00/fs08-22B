@@ -82,6 +82,7 @@ console.log(stringLengths(words));
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
 
+
 /* Questo array di film verrÃ  usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
     {
@@ -237,5 +238,5 @@ function getMovie(movies, imdbID) {
     Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
   */
 function sommaMovieYears(movies) {
-    return movies.reduce((acc, curr) => acc + curr.Year, 0);
+    return movies.reduce((acc, curr) => acc + parseInt(curr.Year), 0);
 }console.log(sommaMovieYears(movies));
