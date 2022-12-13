@@ -89,6 +89,9 @@
         console.log(prodottiFiltrati);
         console.log(prodottiFiltrati2);
 
+        persone.filter(persona => persona.età >= 18).forEach(personaMaggiorenne => invaEmail(personaMaggiorenne.email))
+
+
 //---------------reduce():ritorna un unico valore applicando una funzione a tutti gli elementi dell'array
         //non ritorna per forza un array,utlizzato di solito per i calcoli
 
@@ -135,7 +138,7 @@
         saluta("Palma")
         saluta(); //di default darà RIccardo
 
-        //SHORTHAND SYNTAX
+//-----------SHORTHAND SYNTAX
         //vecchio modo
         const func = (nome, età) =>{
             return{
@@ -151,13 +154,75 @@
                 età,
             }
         }
+        //con la proprietà TERNARY
+        const func3 = (nome, età) =>{
+            return{
+                nome,
+                età:typeof età === "number" ? età : 0,
+            }
+        }
         console.log(func("Riccardo, 18"));
         console.log(func2("Riccardo, 18"));
+        console.log(func3("Riccando, 18"));
+
+
+//------------OBJECT DESTRUCTURING
+
+        const persona = { nome: "Riccardo", cognome:"Gulin", età:18, professione:"Dev"}
         
+        // const nome =persona.nome;
+        // const cognome = persona.cognome;
+        //al posto di fare il codice sopra si utilizza la destrutturazione sotto che crea x variabili tramite una riga di codice
+
+        const{ nome, cognome, età, professione} = persona
 
 
+//-------------ARRAY DESTRUCTURING
 
+        const persone =[
+            { nome: "Riccardo", cognome:"Gulin", età:18, professione:"Dev"},
+            { nome: "Riccardo", cognome:"Gulin", età:18, professione:"Dev"},
+            { nome: "Riccardo", cognome:"Gulin", età:18, professione:"Dev"}
+        ]
 
+        const[persona1,persona2] = persone;//si può anche assegnare un valore ad un elemento che non esiste
+        console.log(persona1)
+        console.log(persona2)
+
+        //2 destrutturazioni
+        // const[{ nome, cognome}, persona2] = persone
+
+        
+//-------------SPREAD OPERATOR SU OGGETTI
+        const ob1 = { nome: "Riccardo", cognome:"Gulin", età:18, professione:"Dev"}
+        const ob2 ={ ...obj1}//i tre puntini copiano tutte le proprieta dell'obj1
+
+        console.log(obj2);
+
+        //se si assegna un nuovo valore all'obj2 ,obj1 non cambia
+
+        obj2.nome = "Giorgio"
+        console.log(obj2);
+
+        const obj3 = {...obj1, ...obj2}//la copia avviene secondo un ordine preciso da sx a dx--->(chi viene dopo viene sovrascritto)
+        console.log(obj3)
+
+        const obj4 ={numeroTel: 123123123, email: "solo@gmail.it"};
+        const obj5 = {...obj1,...obj4}
+        console.log(obj5)//metterà insieme tutte le proprietà di obj1 e obj4 in un unico obj5
+        //se ci fossero state delle proprietà con lo stesso nome le sovrascrive con quello dichiarato più a destra
+
+//----------SPREAD OPERATOR SU ARRAY
+        const stringa = "Ciao a tutti"
+        const array =[...stringa]//darà la stringa sottoforma di lettere singole con "" dentro un unico array
+        console.log(array)
+
+        const arr1 =[1, 2, 3]
+        const arr2 = [4, 5, 6]
+
+        const arr3 =[...arr1,...arr2]
+
+        console.log(arr3)//darà un unico array con tutti i numeri da 1 a 6
 
 
 
