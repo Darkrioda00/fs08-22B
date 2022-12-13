@@ -120,15 +120,26 @@ console.log(upperFirst("ciao sono luigi"))
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
+const cutString= function(string){
+    return string.slice(1, -1)
+}
+console.log(cutString("frase da tagliare"))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
+const giveMeRandom = function(n){
+    let numeroRandom = [];
+    for (let i = 0; i < n; i++){
+    numeroRandom.push(Math.floor(Math.random()*11));
+    }
+    return numeroRandom;
+}
+console.log(giveMeRandom(10))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
 
 
 
@@ -141,11 +152,49 @@ console.log(upperFirst("ciao sono luigi"))
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const checkArray = function(giveMeRandom){
+    for (let i = 0; i < giveMeRandom.lenght; i++)
+    if(i >= 5){
+        console.log(true);
+    }else{
+        console.log(false);
+    }
+    return
+}
+console.log(checkArray(giveMeRandom))
+
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "shoppingCartTotal" che calcola il totale dovuto al negozio (tenendo conto delle quantità di ogni oggetto).
 */
+const shoppingCart = [
+    {
+        price: 10,
+        name: "scarpa",
+        id: "sc12f2",
+        quantity: "3" ,
+    },
+    {
+        price: 5,
+        name: "sciarpa",
+        id: "sc22d3",
+        quantity: "2" , 
+    },
+    {
+        price: 8,
+        name: "cappello",
+        id: "ca45o0",
+        quantity: "4" ,   
+    }
+]
+let costo = shoppingCart.price;
+let quantità = shoppingCart.quantity
+const shoppingCartTotal = function(costo,quantità){
+    return costo*quantità
+}
+console.log(shoppingCartTotal())
+
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 

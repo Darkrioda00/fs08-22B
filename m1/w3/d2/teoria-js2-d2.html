@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//-------METODI DEGLI ARRAYS--------//
+        //pop()estrae l'ultimo elemento della lista,push()aggiunge  alla fine.
+        //shift()estrae il primo elemento della lista,unshift()aggiunge all'inizio
+
+        //splice():crea una nuova lista aggiungendo elementi nella posizione indicata
+
+        const months = ['Jan', 'March', 'April', 'June'];
+        months.splice(1, 0, 'Feb');// inserito alla posizione 1
+        console.log(months); // darà: Array ["Jan", "Feb", "March", "April", "June"]
+
+        //concat():concatena due o + arrays
+        
+        //slice():crea una nuova array da un array esistente indicaando l'indice di partenza e di fine(non obbligatoria)
+
+        const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+        console.log(animals.slice(2));// darà:["camel", "duck", "elephant"]
+        console.log(animals.slice(2, 4));// darà:["camel", "duck"] (2 è COMPRESO,4 è ESCLUSO)
+        console.log(animals.slice(-2));// darà:["duck", "elephant"]
+
+//--------ITERAZIONI DEGLI ARRAY--------//
+        //metodo forEach():richiama una funzione per ogni elemento dell'array
+
+        const arrayDiNumeri = [1,2,3,4,5,6,7,8,9,10]
+        
+        //per stampare ogni elemento dell'array di solito utilizziamo un for loop
+        for (let i=0;i<arrayDiNumeri.length;i++){
+            const element = arrayDiNumeri[index]
+            console.log(element);
+        }
+
+        //forEach utlizza come paramentro una funzione e darà la stessa cosa del for loop
+        arrayDiNumeri.forEach(element =>{
+            console.log(element);
+        })
+        //questi sono i cosidetti funzioni callback:cioè una funzione che passa da un altra funzione come parametro
+
+        const callback = function(element){
+            console.log(callback)
+        }
+
+        //forEach può avere da uno a tre parametri 
+        arrayDiNumeri.forEach((element,index,array) =>{
+            console.log(`a[${index}] = ${element}`)
+            console.log("Array:",array)
+        })
+
+//----------------metodo map():torna come array
+        const prodotti = [
+            { nome: "iphone", prezzo: 200},
+            { nome: "Laptop ASUS", prezzo: 400},
+            { nome: "Laptop ASUS", prezzo: 400},
+            { nome: "Laptop ASUS", prezzo: 45},
+            { nome: "Laptop ASUS", prezzo: 34},
+            { nome: "Laptop ASUS", prezzo: 78},
+            { nome: "Laptop ASUS", prezzo: 98},
+            { nome: "Laptop ASUS", prezzo: 102},
+        ]
+        const prezzi = prodotti.map(prodotto =>{
+            console.log(prodotto)//qua esiste perchè è all'interno(è in locale)
+            return prodotti.prezzo * 0,99
+        })
+        //questo è un modo più abbreviativo dove la freccia fa da return automatico
+        const prezzi2 = prodotti.map(prodotto => prodotto.prezzo*0,99)
+
+        console.log(prezzi);
+        console.log(prezzi2);
+
+//----------------filter():ritorna l'array di oggetti filtrati(n di oggetti o uguali o di meno)
+        //importante: il return del filter deve tornare un valore booleano 
+
+        const prodottiFiltrati = prodotti.filter( elemento =>{
+            return elemento.prezzo > 100
+        })
+
+        //modo abbreviato
+        const prodottiFiltrati2 = prodotti.filter(elemento => elemento.prezzo > 300)
+
+        console.log(prodottiFiltrati);
+        console.log(prodottiFiltrati2);
+
+//---------------reduce():ritorna un unico valore applicando una funzione a tutti gli elementi dell'array
+        //non ritorna per forza un array,utlizzato di solito per i calcoli
+
+        // I iterazione  accumulatore = 0, elemento = 1 ---->quindi nuovo accumulatore 0+1=1
+        // II iterazione accumulatore 1, elemento = 2 ----->quindi nuovo accumulatore 1+2=3
+        // X iterazione accumulatore 45, elemento = 10 ----->accumulatore finale 45+10=55
+        //reduce() può avere tre parametri= accumulatore:
+        arrayDiNumeri.reduce((accumulatore,elemento,index) => {
+            console.log("valore accumulatore:", accumulatore);
+            console.log("Valore elemento:",elemento);
+            return accumulatore + elemento
+        }, 0)//è il valore iniziale dell'accumulatore,con moltiplicazione si inizia da 1
+        console.log(somma)
+
+
+        //every() determina se un array risponde ad un certo requisito in tutti i suoi elementi(risutato booleano)
+        //some() determina se un array risponde ad un certo requisito in qualcuno dei suoi elementi(risutato booleano)
+        //indexOf() determina la posizione di un elemento in base ad una chiave di ricerca
+
+
+        //find():ritorna il primo elemento che rispetta la condizione
+        const trovato = prodotti.find(elemento => elemento.prezzo === 5)
+        console.log(trovato)//mi torna un oggetto perchè l'array di partenza è un array
+
+        //findIndex()
+        const indice = prodotti.findIndex(elemento => elemento.prezzo === 5)
+        console.log(indice) //mi torna un numero perchè mi cerca l'indice
+
+//----------ECMA(EUROPEAN COMPUTER MANUFACTURER'S ASSOCIATION)-ES6
+
+        //PARAMETRI DI DEFAULT
+
+        //ESEMPIO PRE-ES6
+        // const saluta = ()=>{
+        //     console.log("Ciao il mio nome è ${nome} ")
+        // }
+        
+        //CON ES6
+
+        const saluta =(nome = "Riccardo")=>{
+            console.log(`Ciao il mio nome è ${nome}`)
+
+        }
+        saluta("Palma")
+        saluta(); //di default darà RIccardo
+
+        //SHORTHAND SYNTAX
+        //vecchio modo
+        const func = (nome, età) =>{
+            return{
+                name: nome,
+                age: età,
+            }
+        }
+
+        //quando voglio avere il nome dell'oggetto uguale al nome della proprietà 
+        const func2 = (nome, età) =>{
+            return{
+                nome,
+                età,
+            }
+        }
+        console.log(func("Riccardo, 18"));
+        console.log(func2("Riccardo, 18"));
+        
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
