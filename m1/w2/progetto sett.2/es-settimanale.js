@@ -127,22 +127,26 @@ console.log(numericArray)
   es. [f, b, e] --> [6, 2, 5]
 */
 const charactersArray = ["g", "n", "u", "z", "d"]
+const newArray=[];
 for (let i = 0; i< charactersArray.length; i++){
-switch(charactersArray){
+let sos = charactersArray[i];
+
+switch(sos){
   case "g":
-    charactersArray[i] = 7;
-  break;
+    position = 7;
+    break;
   case "n":
-    charactersArray[i] = 14;
-  break;
+    position = 14;
+    break;
   case "u":
-    charactersArray[i] = 21;
-  break;
+    position = 21;
+    break;
   case "z":
-    charactersArray[i] = 26;
-  break;
+    position = 26;
+    break
   case "d":
-    charactersArray[i] = 4;
+    position = 4;
   break;
-  default:console.log(charactersArray);
-}}
+}
+newArray.push(position);
+}

@@ -31,18 +31,9 @@ console.log(randomNumbers);
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici (suggerimento: il metodo filter puÃ² aiutare)
 */
 let numbers = [1, 2, 3, 4, 5, 6];
-
-// function pari(numbers){
-//     let numeriPari = [];
-//     for (let i= 0; i< numbers.length; i++){
-//     let number = numbers[i];
-//     if(numbers % 2 === 0 ){
-//         numeriPari.push(number);
-//     }
-// }return numeriPari;
-// }
-// let numeriPari = numeriPari(numbers)
-// console.log(numeriPari);
+function numeriPari(numbers) {
+    return numbers.filter(num => num % 2 === 0);
+}console.log(numeriPari(numbers));
 
 
 /* ESERCIZIO 4
@@ -204,9 +195,9 @@ const movies = [
 function oldestMovie(movies) {
     return movies.reduce((oldest, current) => {
     if (current.year < oldest.year) 
-    {
+{
     return current;
-    }
+}
     return oldest;
 });
 }console.log(oldestMovie(movies));
@@ -214,19 +205,33 @@ function oldestMovie(movies) {
   /* ESERCIZIO 11
     Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
   */
-  
+function numberOfMovies(movies) {
+    return movies.length;
+}console.log(numberOfMovies(movies));
   /* ESERCIZIO 12
     Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
   */
+function movieTitles(movies) {
+    return movies.map(movie => movie.Title);
+}console.log(movieTitles(movies));
   
   /* ESERCIZIO 13
     Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
   */
+function currentCenturyMovies(movies) {
+    return movies.filter(movie => movie.Year >= 2000);
+}console.log(currentCenturyMovies(movies));
   
   /* ESERCIZIO 14
     Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
   */
+function getMovie(movies, imdbID) {
+    return movies.find(movie => movie.imdbID === imdbID);
+}console.log(getMovie(movies, "tt4154796"));
   
   /* ESERCIZIO 15
     Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
   */
+function sumMovieYears(movies) {
+    return movies.reduce((acc, curr) => acc + curr.Year, 0);
+}console.log(sumMovieYears(movies));
