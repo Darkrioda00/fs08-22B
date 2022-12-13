@@ -31,10 +31,14 @@ console.log(randomNumbers);
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici (suggerimento: il metodo filter puÃ² aiutare)
 */
 let numbers = [1, 2, 3, 4, 5, 6];
-function numeriPari(numbers) {
-    return numbers.filter(num => num % 2 === 0);
-}console.log(numeriPari(numbers));
+// function numeriPari(numbers) {
+//     return numbers.filter(num => num % 2 === 0);
+// }console.log(numeriPari(numbers));
 
+const numeriPari = (numbers) =>{
+    return numbers.filter(num => num % 2 === 0);
+}
+console.log(numeriPari(numbers));
 
 /* ESERCIZIO 4
   Scrivi una funzione per sommare i numeri contenuti in un array
@@ -187,7 +191,7 @@ const movies = [
       Type: "movie",
       Poster: "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg"
     }
-  ];
+];
   
   /* ESERCIZIO 10
     Scrivi una funzione per trovare il film piÃ¹ vecchio nell'array fornito.
@@ -195,7 +199,7 @@ const movies = [
 function oldestMovie(movies) {
     return movies.reduce((oldest, current) => {
     if (current.year < oldest.year) 
-{
+    {
     return current;
 }
     return oldest;
@@ -232,6 +236,6 @@ function getMovie(movies, imdbID) {
   /* ESERCIZIO 15
     Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
   */
-function sumMovieYears(movies) {
+function sommaMovieYears(movies) {
     return movies.reduce((acc, curr) => acc + curr.Year, 0);
-}console.log(sumMovieYears(movies));
+}console.log(sommaMovieYears(movies));
