@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- DOM TRAVERSING:possibilità di js di selezionare e manipolare strutture del DOM -->
+    <!-- tramite l'utilizzo di: ID,CLASSE,NOME TAG,SELETTORI CSS -->
+    <!-- I PRINCIPALI SONO -->
+    <div id="test"></div>
+    <script>
+        //selezioniamo l'elemento con id test e chiediamo di aggiungere uno span tramite innerHTML
+        document.getElementById("test").innerHTML="<span>nuovo elemento</span>"
+
+        //creiamo un nuovo elemento lista
+        document.createElement("li")
+
+        //selezioniamo elementi tramite classe
+        document.getElementsByClassName("nomeClasse")
+
+        //selezioniamo un elemento tramite ID e aggiungiamo una classe
+        document.getElementById("nomeID").className="nomeClasse"
+
+        //selezioniamo un elemento con una classe
+        document.querySelector(".nomeClasse")
+
+        //selezioniamo tutti gli elementi con una stessa classe
+        document.querySelectorAll("nomeClasse")
+//--------------MANIPOLAZIONE DI STILE------------------//
+        document.getElementById("nomeID").style.color="greeen";
+
+//--------------CREAZIONE DI ELEMENTI NON ESISTENTI--------------//
+
+        //creiamo un nuovo elemento div
+        const newDiv = document.createElement("div")//accessibile solo tramite variabile newDiv
+
+        //Una volta creato questo esisterà solo in memoria e potremo modificarlo prima di inserirlo effettivamente nella pagina
+        //solo a quel punto sarà visibile all'utente
+        newDiv.innerText="nuovo contenuto testuale"
+        newDiv.style.backgroundColor="red"
+
+        //per inserire l'eleemnto nella pagina bisogna selezionare il nodo genitore in cui inserire e usare il metodo .appendChild()
+        body.appendChild(newDiv)
+
+        //ogni elemento del DOM è un cosiddetto NODO che è attraversabile e raggiungibile tramite medoti js
+        //i nodi sono organizzati gerarchicamente e sono in relazione l'uno con l'altro:PARENT,CHILD,SIBLING,ANCESTOR
+
+        //Due sono i nodi con cui è possibile accedere a tutto il documento:BODY,DocumentELEMENT
+
+        //le proprietà esistenti per nagivare nei nodi del DOMtree :
+        parentNode,childNode,firstChild,lastChild,nextSIbling,previousSibling
+
+    </script>
+</body>
+</html>
