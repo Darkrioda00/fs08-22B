@@ -20,7 +20,7 @@
         return numero + numero;  //return:restituisce il valore relativo e interrompe la funzione
     }
 
-    // medoti stringhe:lunghezza delle stringhe
+//----------------medoti stringhe:lunghezza delle stringhe
 
     //IndexOf():determina la posizione di un elemento in base ad una chiave di ricerca
     var pets=["cane","gatto","criceto","coniglio"];
@@ -38,7 +38,7 @@
         return valore>10 //darà 2 che è la posizione dove si trova 16 cioè il primo elemento>10
     })
 
-    //estrazione parte di stringa
+//-----------estrazione parte di stringa
 
     //slice():accetta due parametri-posizione inizio e fine
     var saluto = "Ciao a tutti i studenti";
@@ -91,7 +91,7 @@
     Boolean(numero == numero1) //darà true
     Boolean(numero === numero1)//darà false
 
-//-----DATE E METODI DATE
+//-----------DATE E METODI DATE
     //var dataAttuale = new Date():mostra una stringa completa con giorno,mese,aanno,orario e indicazione del timezone del browser
 
     //è possibile creare una data specifica con valori da noi selezionati
@@ -113,6 +113,19 @@
     data.getDay();//giorni della settimana da 0-6
 
     //con set() al posto di get() possiamo configurarle
+
+//-----------------TERNARY OPERATOR-----------//
+// const età = 18;
+// let price
+
+// if(età >= 18){
+//     price="20$";
+// }else{
+//     price = "10$";
+// }
+const price = età >= 18 ? "20$" : "10$" //al posto di scrivere il codice sopra...
+//si può utilizzare il ternary operator con la sintassi ?=allora :=altrimenti
+
 
 
     </script>

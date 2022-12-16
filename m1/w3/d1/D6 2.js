@@ -27,9 +27,9 @@ console.log(areaResult);
 */
 const CrazySum = function(n1,n2){
     if(n1===n2){
-        return(n1+n2)*3;
+      return(n1+n2)*3;
     }else{
-        return(n1+n2)
+      return(n1+n2)
     }
 }
 console.log(CrazySum(4,4))
@@ -203,12 +203,36 @@ console.log(shoppingCartTotal())
  Crea una funzione chiamata "addToShoppingCart" che riceve un nuovo oggetto dello stesso tipo, lo aggiunge a "shoppingCart" e ritorna il nuovo numero totale degli elementi.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
-
+function addToShoppingCart(item) {
+  shoppingCart.push(item);
+  
+  let totalItems = shoppingCart.reduce(function(total, currentItem) {
+    return total + currentItem.quantity;
+  }, 0);
+  return totalItems;
+}
+let item = {
+    id: 1,
+    name: 'guanti',
+    price: 10,
+    quantity: 2
+  };
+  
+let totalItems = addToShoppingCart(item);
+console.log(totalItems);
 /* EXTRA 4
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "maxShoppingCart" che riceve l'array "shoppingCart" e ritorna l'oggetto più costoso in esso contenuto.
 */
+function maxShoppingCart(cart) {
+    let maxItem = cart.reduce(function(max, current) {
+      return (current.price > max.price) ? current : max;
+    });
+    
+    return maxItem;
+  }
+let maxItem = maxShoppingCart(shoppingCart);
+console.log(maxItem);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -216,13 +240,35 @@ console.log(shoppingCartTotal())
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "latestShoppingCart" che riceve l'array "shoppingCart" e ritorna l'ultimo elemento.
 */
-
+function latestShoppingCart(cart) {
+    return cart[cart.length - 1];
+}
+let lastItem = latestShoppingCart(shoppingCart);
+console.log(lastItem);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
  La funzione è composta da un ciclo che stampa un numero casuale tra 0 e 9 finchè il numero casuale non è maggiore di x per tre volte di fila.
 */
+function loopUntil(x){
+ while (true) {
+    let randomNumber = Math.floor(Math.random() * 10);
+    console.log(randomNumber);
+ 
+    if (randomNumber > x) {
+    counter++;
+    } else {
+    counter = 0;
+    }
+ 
+  if (counter === 3) {
+ break;
+  }
+}
+}
+console.log(loopUntil(4));
+
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -230,11 +276,46 @@ console.log(shoppingCartTotal())
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
 
+function average(arr) {
+    let sum = 0;
+    let count = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        let value = arr[i];
+
+        if (typeof value === 'number') {
+          sum += value;
+          count++;
+        }
+    }
+
+  return sum / count;
+}
+let arr = [1, 2, 3, 'four', 5, 6];
+let avg = average(arr);
+console.log(avg);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* EXTRA 8
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
 */
+
+function longest(array2) {
+  let longestString = '';
+
+  for (let i = 0; i < arr.length; i++) {
+    let value = arr[i];
+
+    if (typeof value === 'string' && value.length > longestString.length) {
+      longestString = value;
+    }
+  }
+
+  return longestString;
+}
+let array2 = ['Ciao', 'mondo', 'questo', 'è', 'un', 'test'];
+let longestString = longest(arr);
+console.log(longestString);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -242,12 +323,32 @@ Crea una funzione chiamata "average" che riceve un array come parametro e ne rit
  Crea una funzione per creare un filtro anti-spam per la tua casella email. La funzione riceve un parametro stringa chiamato "emailContent", e torna un valore booleano.
  La funzione deve ritornare true se "emailContent" non contiene le parole "SPAM" o "SCAM".
 */
-
+function spamFilter(emailContent) {
+  if (emailContent.includes('SPAM') || emailContent.includes('SCAM')) {
+    return false;
+  } else {
+    return true;
+  }
+}
+let emailContent = 'Questa email contiene SPAM!';
+let isSpam = spamFilter(emailContent);
+console.log(isSpam);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
 */
+function daysSince(date) {
+    let currentTime = new Date().getTime();
+    let specifiedTime = date.getTime();
+    let timeDifference = currentTime - specifiedTime;
+    let daysDifference = timeDifference / (1000 * 60 * 60 * 24);
+  
+    return Math.floor(daysDifference);
+}
+let date = new Date('January 1, 2018');
+let days = daysSince(date);
+console.log(days);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -258,5 +359,22 @@ Crea una funzione chiamata "average" che riceve un array come parametro e ne rit
  ["00","01","02"
  "10","11","12"]
 */
-
+function matrixGenerator(x, y) {
+    let matrix = [];
+  
+    for (let i = 0; i < x; i++) {
+      let row = [];
+  
+      for (let j = 0; j < y; j++) {
+        let value = i + '' + j;
+        row.push(value);
+      }
+  
+      matrix.push(row);
+    }
+  
+    return matrix;
+}
+let matrix = matrixGenerator(3, 2);
+console.log(matrix);
 /* SCRIVI QUI LA TUA RISPOSTA */
