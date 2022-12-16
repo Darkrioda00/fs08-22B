@@ -91,83 +91,106 @@
     */
 
     const addClassToTitle = function (nuovaClasse) {
-      document.querySelector("h1").className("myheading")
+      let h1 = document.querySelector("h1");
+      h1.className = nuovaClasse;
     }
-
+    addClassToTitle("myHeading");
     /* ESERCIZIO 3
        Scrivi una funzione per che cambi il testo dei p figli di un div
       */
 
-    const changePcontent = function (nuovoP) {
-      let div =document.querySelectorAll("div");
-      div.childNodes
-      
-
-
-    }
+    function changeText(text){
+      let paragrafo = document.querySelectorAll("div p");
+      paragrafo.forEach(function(paragrafo) {
+      paragrafo.textContent = text;
+    });
+  }
+  changeText("Il nuovo testo per tutti gli elementi p");
+    
 
     /* ESERCIZIO 4
        Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
       */
 
     const changeUrls = function () {
-
-
-    }
+      let urls = document.querySelectorAll("a:not(footer a)")
+      urls.forEach(function(urls) {
+      urls.href = "https://www.google.com";
+      });
+  }
+  window.onload = changeUrls;
+    
 
     /* ESERCIZIO 5
        Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
     */
 
-    const addToTheSecond = function () {
-
-
+    const addToTheSecond = function (text) {
+      let list = document.querySelectorAll("ul")[1];
+      let newList = document.createElement("li");
+      newList.textContent = text;
+      list.appendChild(newList);
     }
+    addToTheSecond("Il nuovo elemento della lista");
 
     /* ESERCIZIO 6
        Scrivi una funzione che aggiunga un secondo paragrafo al primo div
     */
 
     const addParagraph = function () {
+      var div = document.querySelector("div");
 
+      var newParagraph = document.createElement("p");
+      newParagraph.textContent = "Il nuovo paragrafo";
 
+      div.appendChild(newParagraph);
     }
+    window.onload = addParagraph;
+
+    
 
     /* ESERCIZIO 7
        Scrivi una funzione che faccia scomparire la prima lista non ordinata
     */
 
     const hideFirstUl = function () {
-
-
+      var firstList = document.querySelector("ul");
+      firstList.style.display = "none";
     }
+    window.onload = hideFirstUl;
 
     /* ESERCIZIO 8 
        Scrivi una funzione che renda verde il background di ogni lista non ordinata
       */
 
     const paintItGreen = function () {
-
-
+      let list = document.querySelectorAll("ul");
+      list.forEach(function(liste){
+        liste.style.backgroundColor="green"
+      })
     }
+    window.onload = paintItGreen;
 
     /* ESERCIZIO 9
        Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
       */
 
     const makeItClickable = function () {
-
-
+      let h1 = document.querySelector("h1");
+      h1.textContent = h1.textContent.slice(0, -1);
     }
+    document.querySelector("h1").addEventListener("click", makeItClickable);
 
     /* ESERCIZIO 10
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
       */
 
     const revealFooterLink = function () {
-
-
+      var link = document.querySelector("footer a");
+      alert(link.href);
     }
+    document.querySelector("footer").addEventListener("click", revealFooterLink);
+
 
     /* ESERCIZIO 11
        Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
@@ -175,10 +198,29 @@
     */
 
     const generateTable = function () {
+      let tableArea = document.querySelector("#tableArea")
 
+      let table = document.createElement("table");
 
+      for (let i = 0; i < 5; i++) {
+  
+      let row = document.createElement("tr");
+
+      let immagine = document.createElement("td");
+      let nomeProdotto = document.createElement("td");
+      let quantità = document.createElement("td");
+      let prezzo = document.createElement("td");
+
+      row.appendChild(immagine);
+      row.appendChild(nomeprodotto);
+      row.appendChild(quantità);
+      row.appendChild(prezzo);
+     
+      table.appendChild(row);
     }
-
+    tableArea.appendChild(table);
+  }
+    window.onload = generateTable;
     /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
     */
@@ -193,26 +235,34 @@
     */
 
     const hideAllImages = function () {
+      var immagine = document.querySelectorAll("td:first-child");
 
-
+      immagine.forEach(function(cell) {
+        cell.style.display = "none";
+      });
     }
-
+    window.onload = hideAllImages;
     /* EXTRA ESERCIZIO 15
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
     */
 
     const changeColorWithRandom = function () {
 
+      var h2 = document.getElementById("changeMyColor");
+      var r = Math.floor(Math.random() * 256);
+      var g = Math.floor(Math.random() * 256);
+      var b = Math.floor(Math.random() * 256);
+      var color = "rgb(" + r + "," + g + "," + b + ")";
 
+      h2.style.color = color; 
     }
+    document.getElementById("changeMyColor").addEventListener("click", changeColorWithRandom);
 
     /* EXTRA ESERCIZIO 16
       Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
     */
 
     const deleteVowels = function () {
-
-
     }
 
   </script>
