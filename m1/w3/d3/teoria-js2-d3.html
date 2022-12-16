@@ -11,6 +11,7 @@
     <!-- tramite l'utilizzo di: ID,CLASSE,NOME TAG,SELETTORI CSS -->
     <!-- I PRINCIPALI SONO -->
     <div id="test"></div>
+    <h2>ciao</h2>
     <script>
         //selezioniamo l'elemento con id test e chiediamo di aggiungere uno span tramite innerHTML
         document.getElementById("test").innerHTML="<span>nuovo elemento</span>"//torna un elemento per element
@@ -52,6 +53,17 @@
 
         //le proprietà esistenti per nagivare nei nodi del DOMtree :
         parentNode,childNode,firstChild,lastChild,nextSIbling,previousSibling
+
+
+
+        //ESEMPIO 
+        const cambiaH2 =() =>{
+            const tuttiH2 = document.querySelectorAll("h2")//ottengo un html collection
+            //il forEach non funziona sulle html collection quindi creiamo un array
+            const tuttiH2Array = Array.from(tuttiH2);
+            //con toggle aggiunge e rimuove la classe quindi il colore
+            tuttiH2Array.forEach(h2 => h2.classList.toggle("scritte arancioni"))
+        }
 
     </script>
 </body>

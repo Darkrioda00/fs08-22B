@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!---------- DOM EVENT ---------->
+<!-- TIPOLOGIE COMUNI DI EVENTI: -->
+<!-- Eventi del mouse:click, hover... -->
+<!-- Eventi della tastiera -->
+<!-- Caricamento di una pagina o immagine -->
+<!-- Eventi sul campo dell'input -->
+<!-- Invio di un form HTML -->
+
+<!-- Esempio onclick -->
+<button onclick="funzione()">Clicca</button>
+
+
+    <script>
+    //scopo principale:assegnare un certo evento ad un elemento html
+    elemento.addEventListener(evento,funzione);//sintassi
+
+    //si può anche attribuire più eventi e funzioni allo stesso elemento
+
+    document.getElementById("nomeID").addEventListener("click",nomeFunzione)
+    
+    //ESEMPI
+    document.getElementsByTagName("button").addEventListener("click,", nomeFunzione);
+
+    document.addEventListener("onmouseover",nomeFunzione1);
+
+    document.addEventListener("onmouseout",nomeFunzione2);
+
+//--------------NODI----------------
+        // i nodi possono essere manipolati aggiungendone di nuovi o rimuovendoli
+        //una COLLECTION di elementi può essere generata
+        document.createElement("h1");
+        document.createTextNode("Un nuovo titolo");
+
+        //o rimossa
+        elemento.remove();
+        elemento.childRemove(elementoSelezionato);
+
+//-------------FORM E VALIDAZIONI-------------//
+
+//js utilizza l'oggetto form per metodi e proprietà di gestione di elementi del form
+
+//l'accesso agli elementi è possibile con la COLLECTION FORM O ELEMENT del form
+        document.forms[0];
+        document.forms.item[1];
+
+        //la COLLECTION ELEMENT deve far riferimento ad un form specifico:
+        elemento("idForm").elements[1].value;
+
+        //length ci riporta il numero di form o di elementi in un form
+        //item(index) e nameItem(id) riportano l'elemento secondo l'ordine dell'indice e dell'id
+        document.getElementById("idForm").elements.item(0).value;
+
+        document.getElementById("idForm").elements.namedItem("id").value;
+
+        //all'oggetto form possiamo attribuire reset() e submit()
+
+
+
+
+    </script>
+</body>
+</html>
