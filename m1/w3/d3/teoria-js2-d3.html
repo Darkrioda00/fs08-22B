@@ -56,13 +56,30 @@
 
 
 
-        //ESEMPIO 
+        //ESEMPIO 1
         const cambiaH2 =() =>{
             const tuttiH2 = document.querySelectorAll("h2")//ottengo un html collection
             //il forEach non funziona sulle html collection quindi creiamo un array
             const tuttiH2Array = Array.from(tuttiH2);
             //con toggle aggiunge e rimuove la classe quindi il colore
             tuttiH2Array.forEach(h2 => h2.classList.toggle("scritte arancioni"))
+        }
+
+        //ESEMPIO 2
+        const aggiungiElementoDiv = () =>{
+            //1. Creo il nuovo elemento/nodo
+            const nuovoDiv = document.createElement("div")
+
+            //2. Modifico il nuovo elemento (aggiungo il testo, aggiungo 1 o più classi)
+            nuovoDiv.innerText = "Ciao sono il nuovo div"
+
+            //3. Ricordarsi di "agganciare" il nuovo elemento creato al Dom
+
+            //3.1 Seleziono prima il padre
+            const Padre = document.getElementById("lista-elementi");
+
+            //3.2 Appendo il nuovoDiv al padre
+            Padre.appendChild(nuovoDiv)
         }
 
     </script>
