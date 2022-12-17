@@ -151,3 +151,4 @@ switch(sos){
 }
 newArray.push(position);
 }
+console.log(newArray);
