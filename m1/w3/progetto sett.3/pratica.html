@@ -7,6 +7,22 @@
     <title>Document</title>
 </head>
 <body>
+  <div id="container">ciao</div>
+
+  <table>
+    <tr><td>Colonna 1</td><td>Colonna 2</td></tr>
+    <tr><td>Dato 1,1</td><td>Dato 1,2</td></tr>
+    <tr><td>Dato 2,1</td><td>Dato 2,2</td></tr>
+    <tr><td>Dato 3,1</td><td>Dato 3,2</td></tr>
+    </table>
+
+  <a href="#">link</a>
+
+  <ul id="myList">
+    <li>lista 1</li>
+    <li>lista 2</li>
+    <li>lista 3</li>
+  </ul>
     <script>
         /*
 REGOLE
@@ -356,10 +372,10 @@ console.log(onlyInLastMillennium(movies));
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
-// function sumAllTheYears(movies) {
-//   return movies.reduce((total, movie) => total + movie.Year, 0);
-// }
-// console.log(sumAllTheYears(movies));
+function sumAllTheYears(movies) {
+  return movies.reduce((total, movies) => total += movies.Year, 0);
+}
+console.log(sumAllTheYears(movies));
 
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
@@ -386,36 +402,78 @@ function removeIndex(index) {
   return movies.filter((movie, i) => i !== index);
 }
 console.log(removeIndex(0));//al posto dello 0 si può mettere il numero di film desiderato
+
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
-
+function getContainerElement() {
+  return document.getElementById('container');
+}
+const containerElement = getContainerElement();
+console.log(containerElement)
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
-
+function getAllTdElements() {
+  return document.querySelectorAll("td");
+}
+const tdElements = getAllTdElements();
+console.log(tdElements)
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+function printTdText() {
+  const tdElements = document.getElementsByTagName("td");
 
+  for (let i = 0; i < tdElements.length; i++) {
+    console.log(tdElements[i].textContent);
+  }
+}
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
+function addRedBackgroundToLinks() {
+  const linkElements = document.getElementsByTagName("a");
 
+  for (const linkElement of linkElements) {
+    linkElement.style.backgroundColor = "red";
+  }
+}
+addRedBackgroundToLinks();
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
+function addToList(item) {
+
+  let newItem = document.createElement("li");
+  newItem.textContent = item;
+  let list = document.getElementById("myList");
+  list.appendChild(newItem);
+}
+addToList("POMODORO");
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
+function clearList() {
+  var list = document.getElementById("myList");
+  while (list.firstChild) {
+    list.removeChild(list.firstChild);
+  }
+}
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
-
+function addClassToRows() {
+  var rows = document.querySelectorAll("tr");
+  for (var i = 0; i < rows.length; i++) {
+    rows[i].classList.add("test");
+  }
+}
+addClassToRows();
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
@@ -429,7 +487,12 @@ console.log(removeIndex(0));//al posto dello 0 si può mettere il numero di film
   ***
 
 */
-
+function halfTree(altezza) {
+  for (var i = 1; i <= altezza; i++) {
+    var row = "*".repeat(i);
+    console.log(row);
+  }
+}halfTree(3);
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -441,6 +504,13 @@ console.log(removeIndex(0));//al posto dello 0 si può mettere il numero di film
   *****
 
 */
+function tree(altezza) {
+  for (var i = 1; i <= altezza; i++) {
+    var spaces = " ".repeat(altezza - i);
+    var stars = "*".repeat(2 * i - 1);
+    console.log(spaces + stars);
+  }
+}tree(3);
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
