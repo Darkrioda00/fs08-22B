@@ -196,7 +196,17 @@ footer a {
 }
 /* desktop */
 @media screen and (min-width: 1200px) {
-  
+    
+    header{
+        display: inline-block;
+        
+    }
+    header div>p{
+        display: inline;
+    }
+    nav{
+        text-align: end;
+    }
     aside div{
         display: inline-block;
         width: 33%;
