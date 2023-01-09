@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function numeri(){
+            let array = [];
+
+        for(let i= 0; i<10; i++){
+            let n = Math.round(Math.random()*100);
+            array.push(n)
+        }return array
+        }let n = numeri();
+        console.log(n);
+    
+        let numbers = [1, 2, 3, 4, 5, 6];
+    
+        const numeriPari= (numbers) =>{
+            return numbers.filter(num => num % 2 === 0
+            )}
+        console.log(numeriPari(numbers));
+
+        let compiti =[
+            {compito:"fare la spesa",fatto:false},
+            {compito:"fare la lavatrice",fatto:true},
+            {compito:"stendere i panni",fatto:true},
+            {compito:"studiare",fatto:false},
+        ]
+        
+        function createDiv(array){
+            for(let i=0; i<compiti.length; i++){
+                const div = document.createElement("div");
+                div.innerHTML=compiti[i].compito
+                document.body.appendChild(div);
+                if (array[i].fatto){
+                    div.style.backgroundColor = 'green';
+                }
+                else{
+                    div.style.backgroundColor = 'red';
+                }
+            }
+        }
+        createDiv(compiti)
+
+
+        
+        
+       
+
+        
+        
+
+
+
+    </script>
+</body>
+</html>
