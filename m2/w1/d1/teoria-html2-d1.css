@@ -1,0 +1,75 @@
+
+body{
+    background-color: red;
+    /* codice del mobile first, */
+}
+
+
+
+@media screen and (min-width: 480px){
+    /* codice che funziona solo su schermi maggiori di 480px */
+    body {
+        background-color: green;
+    }
+}
+
+@media screen and (min-width: 768px){
+    /* codice che funziona solo su schermi maggiori di 768px */
+    body {
+        background-color: green;
+    }
+    h1{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    /* codice che funziona solo su schermi maggiori di 1024px */
+    body {
+        background-color: purple;
+    }
+    /* in questo caso h1 non si vedrà per il codice precedente */
+    /* per farlo ricomparire h1 deve tornare dysplay block*/
+    h1{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    /* codice che funziona solo su schermi maggiori di 1200px */
+    body {
+        background-color: black;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 800px){
+    /* si possono concaatenare due misure anche se inusuale */
+    h1{
+        font-size: 3em;
+    }
+}
+
+
+/* fluidità dell'img */
+article{
+    width: 100%;
+}
+article img{
+    max-width: 100%;
+}
+
+/* ottimizzazione dell'immagine */
+#image{
+    width: 400px;
+    height: 400px;
+    background-image: url(https://placekitten.com/400);
+}
+@media screen and (min-width: 1200px) {
+    #image{
+        width: 800px;
+        height: 800px;
+        background-image: url(https://placekitten.com/800);
+        /* immagine caricata solo se viene rispettata la media screen */
+    }
+}
