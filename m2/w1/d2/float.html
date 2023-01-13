@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* ogni body ha di default 8 px di margine quindi ricordare di toglierlo*/
+    body{
+        height: 100%;
+        margin: 0;
+    }
+    .container{
+        width: 800px;
+        margin: 0 auto;
+        border: 1px solid red;
+    }
+    header{
+        background-color: gray;
+        text-align: center;
+    }
+    header h1{
+        margin: 0;
+        padding-top: 10px;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif
+    }
+    /* azzeriamo la lista e diamogli uno stile nostro */
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+    }
+    /* affianchiamo tutti i elementi lista */
+    ul li{
+        display: inline;
+        padding: 0 20px;
+    }
+    nav{
+        margin-top: 10px;
+        background-color: aquamarine;
+    }
+
+    ul li a{
+        color: blue;
+        text-decoration: none;
+    }
+    #image-left{
+        width: 250px;
+        float: left;     /* mette questo div a destra  e il testo di adatta  coprendo lo spazio libero*/
+    }
+
+    #image-left img{
+        width: 100%;
+    }
+    /* FLOAT fa diventare un elemento floattante quindi non segue più un display block */
+    /*applicare float solo su un elemento e quello con l'altezza minore */
+    
+    #image-right{
+        width: 250px;
+        float: right;
+    }
+    #image-right img{
+        width: 100%;
+    }
+    /* GLI ELEMENTI FLOATTANTI DEVONO ESSERE MESSI PRIMA DEGLI ELEMENTI NON FLOATTANTI nell' html*/
+    
+    section p image{
+        float: left;
+        width: 50px;
+    }
+    
+    
+    footer p{
+        background-color: lightcoral;
+        margin: 0;
+        text-align: center;
+        clear: both;
+    }
+    /* CLEAR ripristina il flow della pagina quando si usa FLOAT */
+</style>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1>Esercizi su FLOAT</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JAVASCRIPT</a></li>
+                    <li><a href="#">TYPESCRIPT</a></li>
+                    <li><a href="#">REACT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <aside id="image-left">
+                <img src="https://placekitten.com/500" alt="kitten picture">
+            </aside>
+            <aside id="image-right">
+                <img src="https://placekitten.com/500" alt="kitten picture">
+            </aside>
+            <!-- tutti gli elementi floattanti di un contenitore vanno inseriti nell'html prima degli elementi liberi -->
+            <section>
+               
+                <p>
+                    <img src="https://placekitten.com/200" alt="kitten picture">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem quos unde quisquam repellendus autem nesciunt qui similique aliquid suscipit, facere assumenda, inventore ipsam cupiditate praesentium velit nam dolorem ducimus saepe.
+                Iure id nihil minus nobis cumque architecto unde, repudiandae vitae laboriosam tempore rem corporis, repellendus commodi error nostrum! Non deleniti recusandae dolor facilis, perferendis eius minima quis quas? Fugit, possimus!
+                Tempore saepe corporis minus ut repellendus temporibus quisquam quaerat deserunt excepturi molestiae sit, quae qui amet reiciendis doloribus sapiente distinctio porro atque nulla sint officia? Ducimus mollitia ipsam modi aut.
+                </p>
+            </section>
+     
+        </main>
+        <footer>
+            <p>footer</p>
+        </footer>
+    </div>
+</body>
+</html>
