@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .card{
+        width: 300px;
+        box-shadow: 2px 2px 6px 0px rgba(0,0, 0, 0.3);
+        margin:0 10px 10px;
+        /* valori di box shadow:scostamento su x,scostamento su y,raggio,dispersione e colore */
+        display: flex;
+        flex-direction: column;
+    }
+    .card button{
+        background-color: gray;
+        border: none;
+        color: white;
+        width: 100%;
+        padding: 10px 0;
+    }
+    main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .text-container{
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    /* tutti i card hanno i testi diversi e quindi il bottone non hanno tutti lastessa posizione */
+    /* per fare ciò bisogna dare display flex alla card e al div testo e dare un heigth 100% con flex column */
+</style>
+<body>
+    <main>
+        <article class="card">
+            <img src="https://placekitten.com/300" alt="">
+            <div class="text-container">
+                <h3>Lorem ipsum dolor sit, amet</h3>
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+                <button>Go to article</button>
+            </div>
+        </article>
+        <article class="card">
+            <img src="https://placekitten.com/300" alt="">
+            <div class="text-container">
+                <h3>Lorem ipsum dolor sit, amet</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam tempore deleniti perspiciatis doloribus facilis cum consequatur aliquam nemo sapiente sint illum maiores voluptatibus consectetur soluta, recusandae ab nulla quidem magni.</p>
+                <button>Go to article</button>
+            </div>
+        </article>
+        <article class="card">
+            <img src="https://placekitten.com/300" alt="">
+            <div class="text-container">
+                <h3>Lorem ipsum dolor sit, amet</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam tempore deleniti perspiciatis doloribus facilis cum consequatur aliquam nemo sapiente sint illum maiores voluptatibus  quidem magni.</p>
+                <button>Go to article</button>
+            </div>
+        </article>
+        <article class="card">
+            <img src="https://placekitten.com/300" alt="">
+            <div class="text-container">
+                <h3>Lorem ipsum dolor sit, amet</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam tempore deleniti perspiciatis doloribus facilis cum consequatur aliquam nemo sapiente sint illum</p>
+                <button>Go to article</button>
+            </div>
+        </article>
+    </main>
+
+    
+</body>
+</html>

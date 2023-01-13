@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* nel momento in cui aal padre gli diamo display flex i figli si comportano con flex items */
+    .main-nav{
+        background-color: orangered;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+        border-radius: 3px;
+    }
+
+    .main-nav ul{
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .main-nav li{
+        font-size: 1.1em;
+        margin-right: 1em;
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    form button{
+        background-color: white;
+        color: orangered;
+        border: none;
+        border-radius: 7px;
+    }
+    
+</style>
+<body>
+    <nav class="main-nav">
+       <ul>
+        <li>Logo</li>
+        <li>Home</li>
+        <li>Products</li>
+        <li>Service</li>
+       </ul>
+       <form>
+        <input type="search" name="" id="" placeholder="Search">
+        <button>Go</button>
+       </form> 
+    </nav>
+</body>
+</html>
