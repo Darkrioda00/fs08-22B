@@ -1,0 +1,12 @@
+@import "colors";
+
+@import "buttons";
+
+
+
+//questo import mi incorpora dentro style.scss il partial del button
+//oltre ad avere degli import possono avere anche delle regole dentro
+
+body{
+    background-color: $secondary-color;
+}

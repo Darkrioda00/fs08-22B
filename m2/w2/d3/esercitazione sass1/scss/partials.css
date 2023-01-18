@@ -1,0 +1,61 @@
+.bottone-1 {
+  border: 2px solid red;
+  background-color: yellow;
+  border-radius: 5px;
+  width: 150px;
+  height: 30px;
+  margin-left: 25px;
+}
+
+.bottone-2 {
+  border: 2px solid red;
+  background-color: yellow;
+  border-radius: 5px;
+}
+
+.navbar {
+  background-color: green;
+  color: yellow;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+.navbar .menu ul {
+  display: flex;
+  list-style: none;
+  margin-right: 20px;
+}
+.navbar .menu ul li {
+  margin-right: 20px;
+}
+.navbar .menu ul li a {
+  text-decoration: none;
+  color: yellow;
+}
+
+.footer {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 100;
+  background-color: green;
+  color: yellow;
+  display: flex;
+  justify-content: space-around;
+}
+.footer .centrale {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer ul {
+  list-style: none;
+  text-transform: uppercase;
+}
+
+body {
+  margin: 0;
+}/*# sourceMappingURL=partials.css.map */

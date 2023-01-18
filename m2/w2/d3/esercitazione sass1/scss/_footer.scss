@@ -1,0 +1,19 @@
+.footer{
+    position: sticky;
+    bottom: 100;
+    background-color: $primary-color;
+    color: $secondary-color;
+    display: flex;
+    justify-content: space-around;
+
+    .centrale{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    ul{
+        list-style: none;
+        text-transform: uppercase;
+    }
+
+}
