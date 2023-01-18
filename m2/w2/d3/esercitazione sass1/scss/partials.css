@@ -54,8 +54,9 @@ button:hover {
 }
 
 .footer {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
   bottom: 100;
   background-color: green;
   color: yellow;
