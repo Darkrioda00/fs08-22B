@@ -1,0 +1,15 @@
+//le funzioni in SASS permettono di generare dinamicamente CSS
+//ma possono essere usate per calcolare dei valori
+//la direttiva @function. possiamo inserire dei parametri
+//il valore di ritorno della funzione va indicato esplicitamente con
+//la direttiva @return
+
+@function em($pixels, $pixelsFor1em: 16px){
+    //la funzione em ha lo scopo di ricevere una quantità di px 
+    //e di ritornare in em
+    @return calc($pixels/$pixelsFor1em)* 1em;
+}
+
+body{
+    padding-left: em(18px, 24px); //guarda in function.css
+}

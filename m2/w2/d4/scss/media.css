@@ -1,0 +1,17 @@
+.menu {
+  padding: 0px;
+  list-style-type: none;
+}
+.menu li {
+  padding: 10px;
+  display: block;
+  text-align: center;
+  background-color: lightblue;
+}
+@media screen and (min-width: 576px) {
+  .menu li {
+    display: inline;
+    background-color: white;
+    border-right: 1px solid black;
+  }
+}/*# sourceMappingURL=media.css.map */
